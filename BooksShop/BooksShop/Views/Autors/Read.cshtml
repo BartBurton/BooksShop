@@ -1,0 +1,57 @@
+﻿@model Autor
+
+@{
+    ViewData["Title"] = Model.Name;
+    ViewData["Source"] = "/Autors/Read/" + Model.Id;
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    Дата рождения: @Model.Dob?.ToString("d")
+</p>
+<p>
+    <a asp-action="Update" asp-route-id="@Model.Id" asp-route-source=@ViewData["Source"]>Изменить</a>
+    &nbsp&nbsp&nbsp&nbsp
+    <a asp-action="Delete" asp-route-id="@Model.Id" asp-route-source=@null>Удалить</a>
+</p>
+
+
+<br />
+<h4>Книги</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Название
+            </th>
+            <th>
+                Издание
+            </th>
+            <th>
+                Издатель
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.BooksAutors)
+        {
+            <tr>
+                <td>
+                    @item.IdBookNavigation.Title
+                </td>
+                <td>
+                    @item.IdBookNavigation.Edition
+                </td>
+                <td>
+                    @item.IdBookNavigation.PublishedAt
+                </td>
+                <td>
+                    <a asp-controller="Books" asp-action="Read" asp-route-id="@item.IdBookNavigation.Id">Подробности</a> |
+                    <a asp-controller="Books" asp-action="Update" asp-route-id="@item.IdBookNavigation.Id" asp-route-source=@ViewData["Source"]>Изменить</a> |
+                    <a asp-controller="Books" asp-action="Delete" asp-route-id="@item.IdBookNavigation.Id" asp-route-source=@ViewData["Source"]>Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
