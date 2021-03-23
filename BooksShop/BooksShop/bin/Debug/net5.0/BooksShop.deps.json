@@ -316,7 +316,9 @@
           "System.Xml.XmlSerializer.Reference": "5.0.0.0",
           "System.Xml.XPath": "5.0.0.0",
           "System.Xml.XPath.XDocument": "5.0.0.0",
-          "WindowsBase": "4.0.0.0"
+          "WindowsBase": "4.0.0.0",
+          "Interop.Microsoft.Office.Core": "2.5.0.0",
+          "Interop.Microsoft.Office.Interop.Excel": "1.7.0.0"
         },
         "runtime": {
           "BooksShop.dll": {}
@@ -3193,6 +3195,18 @@
           "WindowsBase.dll": {}
         },
         "compileOnly": true
+      },
+      "Interop.Microsoft.Office.Core/2.5.0.0": {
+        "compile": {
+          "Interop.Microsoft.Office.Core.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Interop.Microsoft.Office.Interop.Excel/1.7.0.0": {
+        "compile": {
+          "Interop.Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "compileOnly": true
       }
     }
   },
@@ -5359,6 +5373,16 @@
       "sha512": ""
     },
     "WindowsBase/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.Microsoft.Office.Core/2.5.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.Microsoft.Office.Interop.Excel/1.7.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

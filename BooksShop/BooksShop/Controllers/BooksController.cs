@@ -27,7 +27,7 @@ namespace BooksShop.Controllers
 
             return View(books);
         }
-
+        
 
 
         #region Создание книги
