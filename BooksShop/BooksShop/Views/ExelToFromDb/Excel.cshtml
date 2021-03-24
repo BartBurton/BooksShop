@@ -6,6 +6,7 @@
     <div class="card-header text-center"><h4>@ViewData["Title"]</h4></div>
     <div class="card-body">
 
+        @* Форма для загрузки файла excel *@
         <form asp-action="Load" method="post" enctype="multipart/form-data" class="m-4">
             <div class="input-group">
                 <div class="custom-file">
@@ -17,6 +18,7 @@
             </div>
         </form>
 
+        @* Кнопка скачивания файла excel *@
         <a asp-action="Download" class="btn btn-primary" role="button">Скачать Excel файл данных</a>
 
     </div>

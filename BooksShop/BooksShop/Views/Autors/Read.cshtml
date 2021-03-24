@@ -2,9 +2,13 @@
 
 @{
     ViewData["Title"] = Model.Name;
+
+    //Если представление может вызывать действия, требующие источник запроса,
+    //ViewData["Source"] его хранит
     ViewData["Source"] = "/Autors/Read/" + Model.Id;
 }
 
+@* Основные данные об авторе с возможностью его удаления и изменения *@
 <h2>@ViewData["Title"]</h2>
 <p>
     Дата рождения: @Model.Dob?.ToString("d")
@@ -12,10 +16,13 @@
 <p>
     <a asp-action="Update" asp-route-id="@Model.Id" asp-route-source=@ViewData["Source"]>Изменить</a>
     &nbsp&nbsp&nbsp&nbsp
+    @* Если действие приведет к невозможности возвращения на страницу источника, *@
+    @* не нужно его указывать, чтобы действие вернуло страницу по умолчанию *@
     <a asp-action="Delete" asp-route-id="@Model.Id" asp-route-source=@null>Удалить</a>
 </p>
 
 
+@* Список книг написанных автором *@
 <br />
 <h4>Книги</h4>
 <table class="table">

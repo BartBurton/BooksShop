@@ -5,6 +5,9 @@ using BooksShop.Models;
 
 namespace BooksShop.Controllers
 {
+    /// <summary>
+    /// Контроллер работы с данными о авторах
+    /// </summary>
     public class AutorsController : Controller
     {
         private readonly booksshopContext _bs;
@@ -19,7 +22,6 @@ namespace BooksShop.Controllers
         public async Task<IActionResult> Autors()
         {
             var autors = await _bs.Autors.ToListAsync();
-
             return View(autors);
         }
 
@@ -47,7 +49,7 @@ namespace BooksShop.Controllers
             await _bs.AddAsync(model);
             await _bs.SaveChangesAsync();
 
-            return RedirectToAction("Autors");
+            return RedirectToAction("Read", new { model.Id });
         }
 
         #endregion
@@ -61,10 +63,10 @@ namespace BooksShop.Controllers
         /// <param name="id">ID автора</param>
         public async Task<IActionResult> Read(long? id)
         {
+            //Находим автора
             Autor autor = await _bs.Autors.FirstOrDefaultAsync(a => a.Id == id);
             if (autor == null) RedirectToAction("Autors");
-
-
+            //Подгружаем данные о его книгах
             _bs.Entry(autor)
                 .Collection(a => a.BooksAutors)
                 .Query()
@@ -86,11 +88,11 @@ namespace BooksShop.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(long? id, string source)
         {
-            var x = Request.HttpContext.TraceIdentifier;
-
+            //Находим автора возврацаем форму
             Autor autor = await _bs.Autors.FirstOrDefaultAsync(a => a.Id == id);
             if (autor == null) RedirectToAction("Autors");
 
+            //Повторно сохраняем источник запроса, чтобы вернуться к нему из Post метода
             ViewData["Source"] = source;
             return View(autor);
         }
@@ -104,7 +106,6 @@ namespace BooksShop.Controllers
             if (!ModelState.IsValid) { return View(); }
 
             Autor autor = await _bs.Autors.FirstOrDefaultAsync(a => a.Id == model.Id);
-
             if (autor != null)
             {
                 autor.Name = model.Name;
@@ -112,6 +113,7 @@ namespace BooksShop.Controllers
                 await _bs.SaveChangesAsync();
             }
 
+            //Если источник задан возвращаемся к нему, иначе на страница автора
             return (source != null) ? Redirect(source) : RedirectToAction("Read", new { autor.Id });
         }
 
@@ -126,16 +128,14 @@ namespace BooksShop.Controllers
         /// <param name="id">ID автора</param>
         public async Task<IActionResult> Delete(long? id, string source)
         {
-            var x = Request.Query;
-            
             Autor autor = await _bs.Autors.FirstOrDefaultAsync(a => a.Id == id);
-
             if (autor != null)
             {
                 _bs.Autors.Remove(autor);
                 await _bs.SaveChangesAsync();
             }
 
+            //Если источник задан, возвращаемся к нему, иначе к списку авторов
             return (source != null) ? Redirect(source) : RedirectToAction("Autors");
         } 
 

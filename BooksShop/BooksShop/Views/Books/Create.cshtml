@@ -30,11 +30,15 @@
                 <textarea class="form-control" asp-for="Description"></textarea>
             </div>
 
+            @* Список авторов вернется не в модели, а в Request.Form["Autors"], при этом индексы будут
+                храниться как строки*@
             <div class="form-group">
                 <label>Автор:</label>
                 <select class="form-control" name="Autors" size="4" multiple>
+                    @* Предоставляем список всех авторов *@
                     @foreach (Autor item in ViewBag.Autors)
                     {
+                        //Устанавливаем selected для текущих книги ViewBag.Owners
                         if (ViewBag.Owners.Contains(item.Id))
                         {
                             <option selected value=@item.Id>@item.Name</option>

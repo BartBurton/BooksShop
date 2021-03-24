@@ -7,6 +7,7 @@
 <div class="card text-center">
     <div class="card-header text-center"><h4>@ViewData["Title"]</h4></div>
     <div class="card-body">
+        @* Т.к. форма вернется в Post метод, ему нужно передать источник запроса, который вызвал Get метод *@
         <form asp-action="Update" asp-route-source=@ViewData["Source"] method="post" class="m-4">
 
             <div class="form-group">
