@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using BooksShop.Models;

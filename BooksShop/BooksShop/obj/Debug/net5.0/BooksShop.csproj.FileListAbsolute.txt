@@ -389,9 +389,8 @@ C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Razor\Vi
 C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Razor\Views\Books\Read.cshtml.g.cs
 C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Razor\Views\Books\Update.cshtml.g.cs
 C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Razor\Views\Books\Create.cshtml.g.cs
-C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Razor\Views\ExelToFromDb\Index.cshtml.g.cs
-C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Interop.Microsoft.Office.Core.dll
-C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Interop.Microsoft.Office.Interop.Excel.dll
-C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\BooksShop.csproj.ResolveComReference.cache
-C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\refs\Interop.Microsoft.Office.Core.dll
-C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\refs\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\ClosedXML.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\ExcelNumberFormat.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\System.IO.Packaging.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Razor\Views\ExelToFromDb\Excel.cshtml.g.cs
