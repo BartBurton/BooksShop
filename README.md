@@ -8,4 +8,4 @@
 >Решение находится в папке BooksShop/. Решение закомментированно и использует для стилизации страниц библиотеку bootstrap. 
  
 ### 3)Working with Excel 
->Решение находится в BooksShop/BooksShop/Controllers/ExсelToFromDbController.cs и в BooksShop/BooksShop/Views/ExelToFromDb/Excel.cshtml. В папке excel/ лежит файл для загрузки корректных данных в базу.
+>Решение находится в BooksShop/BooksShop/Controllers/ExсelToFromDbController.cs и в BooksShop/BooksShop/Views/ExcelToFromDb/Excel.cshtml. В папке excel/ лежит файл для загрузки корректных данных в базу.
