@@ -14,10 +14,10 @@ namespace BooksShop.Controllers
     /// <summary>
     /// Контроллер работы с Excel файлом.
     /// </summary>
-    public class ExelToFromDbController : Controller
+    public class ExcelToFromDbController : Controller
     {
         private readonly booksshopContext _bs;
-        public ExelToFromDbController(booksshopContext bs)
+        public ExcelToFromDbController(booksshopContext bs)
         {
             _bs = bs;
         }
@@ -113,6 +113,7 @@ namespace BooksShop.Controllers
 
             //Кол-во строк с данными
             sheet.Cell("A1").Value = count - 3;
+            sheet.Cell("B1").Value = "Кол-во строк с данными";
             //Стиль содержания таблицы
             sheet.Range("A2:F" + (count - 1)).Style.Border.InsideBorder = XLBorderStyleValues.Thin;
             sheet.Range("A2:F" + (count - 1)).Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
@@ -139,13 +140,19 @@ namespace BooksShop.Controllers
             var workbook = new XLWorkbook(file.OpenReadStream());
             var sheet = workbook.Worksheet(1);
 
-            //В ячейке A1 указано кол-во строк с данными
-            int count = Convert.ToInt32(sheet.Cell(1, 1).Value);
+            int count = 0;
+            try
+            {
+                //В ячейке A1 указано кол-во строк с данными
+                count = Convert.ToInt32(sheet.Cell(1, 1).Value);
+            }
+            catch { return; }
+
             //Считывание с 3 строки, т.к. во 2 заголовки таблицы
             var rows = sheet.RangeUsed().Rows(3, 2 + count);
 
             Book book = null;
-            Autor autor;
+            Autor autor = null;
             BooksAutor ba;
             foreach (var row in rows)
             {
@@ -162,20 +169,30 @@ namespace BooksShop.Controllers
                     };
                     _bs.Books.Add(book);
                 }
-                //Авторы связываются с текущим экземпляром book
-                autor = new Autor()
-                {
-                    Name = row.Cell(5).Value.ToString(),
-                    Dob = row.Cell(6).Value as DateTime?
-                };
-                ba = new BooksAutor()
-                {
-                    IdAutorNavigation = autor,
-                    IdBookNavigation = book
-                };
 
-                _bs.Autors.Add(autor);
-                _bs.BooksAutors.Add(ba);
+                //Авторы связываются с текущим экземпляром book
+                //Если у книги нет автора или строка пустая автор не создается
+                if (row.Cell(5).Value.ToString() != "")
+                {
+                    autor = new Autor()
+                    {
+                        Name = row.Cell(5).Value.ToString(),
+                        Dob = row.Cell(6).Value as DateTime?
+                    }; 
+                    _bs.Autors.Add(autor);
+                }
+
+                //Связывание проиходит только, если оба были загружены
+                if (autor != null && book != null)
+                {
+                    ba = new BooksAutor()
+                    {
+                        IdAutorNavigation = autor,
+                        IdBookNavigation = book
+                    }; 
+                    _bs.BooksAutors.Add(ba);
+                }
+
                 _bs.SaveChanges();
             }
         } 

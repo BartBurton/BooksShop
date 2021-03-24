@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Excel файл";
+}
+
+<div class="card text-center">
+    <div class="card-header text-center"><h4>@ViewData["Title"]</h4></div>
+    <div class="card-body">
+
+        Формат файла для загрузки
+        <img src="~/img/FormatExcel.PNG" class="img-fluid"/>
+        <pre>
+            Укажите в ячейке A1 количество строк с данными, в зеленных строках.
+            Заполняйте данные начиная с третьей строки.
+            Если вам нужно добавить только авторов, указывайте их в начале до книг, начиная с ячейки Е.
+            Если книга имеет несколько авторов, указывайте их на новых строках, но не дублируйте 
+            данные о книге (обратите внимание на область A7:F9).
+            Чтобы добавить книгу без автора, не заполняйте соотвтствующие ячейки.
+        </pre>
+
+        @* Форма для загрузки файла excel *@
+        <form asp-action="Load" method="post" enctype="multipart/form-data" class="m-4">
+            <div class="input-group">
+                <div class="custom-file">
+                    <input name="File" type="file" accept=".xls,.xlsx" class="form-control-file">
+                </div>
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Добавить в базу</button>
+                </div>
+            </div>
+        </form>
+
+        @* Кнопка скачивания файла excel *@
+        <a asp-action="Download" class="btn btn-primary" role="button">Скачать Excel файл данных</a>
+
+    </div>
+</div>
