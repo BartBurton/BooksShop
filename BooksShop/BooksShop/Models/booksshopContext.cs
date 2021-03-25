@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-
-#nullable disable
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace BooksShop.Models
 {
@@ -61,7 +57,7 @@ namespace BooksShop.Models
             modelBuilder.Entity<BooksAutor>(entity =>
             {
                 entity.HasKey(e => new { e.IdBook, e.IdAutor })
-                    .HasName("PK__Books_Au__1F1B2A9AC00E0C5E");
+                    .HasName("PK__Books_Au__1F1B2A9A1AE02E28");
 
                 entity.ToTable("Books_Autors");
 
@@ -73,7 +69,7 @@ namespace BooksShop.Models
                     .WithMany(p => p.BooksAutors)
                     .HasForeignKey(d => d.IdAutor)
                     .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__Books_Aut__id_au__60A75C0F");
+                    .HasConstraintName("FK__Books_Aut__id_au__3C69FB99");
 
                 entity.HasOne(d => d.IdBookNavigation)
                     .WithMany(p => p.BooksAutors)

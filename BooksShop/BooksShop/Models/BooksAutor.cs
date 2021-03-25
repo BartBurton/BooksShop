@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
-
-namespace BooksShop.Models
+﻿namespace BooksShop.Models
 {
     public partial class BooksAutor
     {

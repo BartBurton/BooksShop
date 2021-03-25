@@ -7,7 +7,7 @@ namespace BooksShop.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK__Books_Aut__id_au__60A75C0F",
+                name: "FK__Books_Aut__id_au__3C69FB99",
                 table: "Books_Autors");
 
             migrationBuilder.DropForeignKey(
@@ -15,7 +15,7 @@ namespace BooksShop.Migrations
                 table: "Books_Autors");
 
             migrationBuilder.AddForeignKey(
-                name: "FK__Books_Aut__id_au__60A75C0F",
+                name: "FK__Books_Aut__id_au__3C69FB99",
                 table: "Books_Autors",
                 column: "id_autor",
                 principalTable: "Autors",
@@ -34,7 +34,7 @@ namespace BooksShop.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK__Books_Aut__id_au__60A75C0F",
+                name: "FK__Books_Aut__id_au__3C69FB99",
                 table: "Books_Autors");
 
             migrationBuilder.DropForeignKey(
@@ -42,7 +42,7 @@ namespace BooksShop.Migrations
                 table: "Books_Autors");
 
             migrationBuilder.AddForeignKey(
-                name: "FK__Books_Aut__id_au__60A75C0F",
+                name: "FK__Books_Aut__id_au__3C69FB99",
                 table: "Books_Autors",
                 column: "id_autor",
                 principalTable: "Autors",

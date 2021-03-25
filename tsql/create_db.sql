@@ -5,7 +5,7 @@ create database booksshop
 on primary
 (
 	name = bs_dat,
-	filename = 'D:\bookshop\bs.mdf',
+	filename = 'D:\!!dataDB_MSSQLServer\booksshop\bs.mdf',
 	size = 64,
 	filegrowth = 8
 )
@@ -13,7 +13,7 @@ on primary
 log on
 (
 	name = bs_log,
-	filename = 'D:\bookshop\bs.ldf',
+	filename = 'D:\!!dataDB_MSSQLServer\booksshop\bs.ldf',
 	size = 32,
 	filegrowth = 8
 )

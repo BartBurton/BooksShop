@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BooksShop.Migrations
 {
     [DbContext(typeof(booksshopContext))]
-    [Migration("20210323182211_Initial")]
+    [Migration("20210325193103_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,7 +92,7 @@ namespace BooksShop.Migrations
                         .HasColumnName("id_autor");
 
                     b.HasKey("IdBook", "IdAutor")
-                        .HasName("PK__Books_Au__1F1B2A9AC00E0C5E");
+                        .HasName("PK__Books_Au__1F1B2A9A1AE02E28");
 
                     b.HasIndex("IdAutor");
 
@@ -104,7 +104,7 @@ namespace BooksShop.Migrations
                     b.HasOne("BooksShop.Models.Autor", "IdAutorNavigation")
                         .WithMany("BooksAutors")
                         .HasForeignKey("IdAutor")
-                        .HasConstraintName("FK__Books_Aut__id_au__60A75C0F")
+                        .HasConstraintName("FK__Books_Aut__id_au__3C69FB99")
                         .IsRequired();
 
                     b.HasOne("BooksShop.Models.Book", "IdBookNavigation")
