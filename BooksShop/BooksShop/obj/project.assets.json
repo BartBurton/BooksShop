@@ -2375,6 +2375,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ExcelFileInteraction/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ClosedXML": "0.95.4"
+        },
+        "compile": {
+          "bin/placeholder/ExcelFileInteraction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExcelFileInteraction.dll": {}
+        }
       }
     }
   },
@@ -8003,11 +8016,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ExcelFileInteraction/1.0.0": {
+      "type": "project",
+      "path": "../ExcelFileInteraction/ExcelFileInteraction.csproj",
+      "msbuildProject": "../ExcelFileInteraction/ExcelFileInteraction.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "ClosedXML >= 0.95.4",
+      "ExcelFileInteraction >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.4"
@@ -8039,7 +8057,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\MAXXXYMIRON\\Desktop\\tasks\\BooksShop\\ExcelFileInteraction\\ExcelFileInteraction.csproj": {
+              "projectPath": "C:\\Users\\MAXXXYMIRON\\Desktop\\tasks\\BooksShop\\ExcelFileInteraction\\ExcelFileInteraction.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -8052,10 +8074,6 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "ClosedXML": {
-            "target": "Package",
-            "version": "[0.95.4, )"
-          },
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[5.0.4, )"

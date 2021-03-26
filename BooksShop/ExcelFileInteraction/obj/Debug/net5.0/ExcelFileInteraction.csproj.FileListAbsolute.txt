@@ -1,0 +1,12 @@
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\bin\Debug\net5.0\ExcelFileInteraction.deps.json
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\bin\Debug\net5.0\ExcelFileInteraction.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\bin\Debug\net5.0\ref\ExcelFileInteraction.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\bin\Debug\net5.0\ExcelFileInteraction.pdb
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ExcelFileInteraction.csprojAssemblyReference.cache
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ExcelFileInteraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ExcelFileInteraction.AssemblyInfoInputs.cache
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ExcelFileInteraction.AssemblyInfo.cs
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ExcelFileInteraction.csproj.CoreCompileInputs.cache
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ExcelFileInteraction.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ref\ExcelFileInteraction.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\ExcelFileInteraction\obj\Debug\net5.0\ExcelFileInteraction.pdb

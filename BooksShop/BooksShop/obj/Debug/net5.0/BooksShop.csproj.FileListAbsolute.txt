@@ -394,3 +394,5 @@ C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\Document
 C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\ExcelNumberFormat.dll
 C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\System.IO.Packaging.dll
 C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\obj\Debug\net5.0\Razor\Views\ExcelToFromDb\Excel.cshtml.g.cs
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\ExcelFileInteraction.dll
+C:\Users\MAXXXYMIRON\Desktop\tasks\BooksShop\BooksShop\bin\Debug\net5.0\ExcelFileInteraction.pdb
