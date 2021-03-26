@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.IO;
@@ -8,7 +7,6 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using BooksShop.Models;
 using Excel;
-using ClosedXML.Excel;
 
 namespace BooksShop.Controllers
 {
