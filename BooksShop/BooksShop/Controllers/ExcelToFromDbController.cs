@@ -110,7 +110,6 @@ namespace BooksShop.Controllers
                 }
                 if(book.BooksAutors.Count == 0) body.Add(new object[6]);
             }
-            body.RemoveAt(body.Count - 1);
 
             string[] headers = new string[6] 
             {

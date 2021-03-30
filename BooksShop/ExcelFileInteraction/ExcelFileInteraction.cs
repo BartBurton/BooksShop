@@ -105,7 +105,7 @@ namespace Excel
     public class HeaderNotEqualBodyException : Exception
     {
         public HeaderNotEqualBodyException() { }
-        public override string Message => "Количество заголовкав не равно количеству столбцов тела таблицы!";
+        public override string Message => "Количество заголовков не равно количеству столбцов тела таблицы!";
     }
 
     /// <summary>
